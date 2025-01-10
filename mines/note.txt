@@ -1,0 +1,97 @@
+// Select all cards and pagination buttons
+const cards = document.querySelectorAll(".card");
+const pageButtons = document.querySelectorAll(".page-btn");
+const secondProducts = document.querySelectorAll(".first-Card");
+const paginationBtn = document.querySelectorAll(".page-btn-1");
+// const AddToCart = document.querySelectorAll(".add_to_cart");
+let currentPage = 1;
+
+// Function to display the cards for the selected page
+function showPage(page) {
+  currentPage = page;
+
+  // Update card visibility
+  cards.forEach((card) => {
+    if (parseInt(card.dataset.page) === page) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+
+  // Update active pagination button
+  pageButtons.forEach((button) => {
+    button.classList.remove("active");
+    if (parseInt(button.dataset.page) === page) {
+      button.classList.add("active");
+    }
+  });
+}
+
+// Add event listeners to pagination buttons
+pageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    showPage(parseInt(button.dataset.page));
+  });
+});
+
+// Show the first page on load
+showPage(currentPage);
+
+let currentSecondProduct = 1;
+function showSecondProduct(cana) {
+  currentSecondProduct = cana;
+  // currentPage = page;
+
+  // Update card visibility
+  secondProducts.forEach((card) => {
+    if (parseInt(card.dataset.cana) === cana) {
+      card.classList.remove("hidden-1");
+    } else {
+      card.classList.add("hidden-1");
+    }
+  });
+
+  // Update active pagination button
+  paginationBtn.forEach((button) => {
+    button.classList.remove("active-1");
+    if (parseInt(button.dataset.cana) === cana) {
+      button.classList.add("active-1");
+    }
+  });
+}
+paginationBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    showSecondProduct(parseInt(button.dataset.cana));
+  });
+});
+showSecondProduct(currentSecondProduct);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const span = document.querySelector(".joha span");
+  function resetAnimation(params) {
+    span.style.animation = "none";
+    span.offsetHeight;
+    span.style.animation = "";
+  }
+  setInterval(() => {
+    resetAnimation();
+  }, 5000);
+});
+
+const AddToCart = document.querySelectorAll(".add_to_cart");
+
+AddToCart.forEach((button) => {
+  button.addEventListener("click", () => {
+    const id = button.getAttribute("data-id");
+    const title = button.getAttribute("data-title");
+    const image = button.getAttribute("data-image");
+    const price = button.getAttribute("data-price");
+
+    const cartItem = { id, title, image, price };
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCartItems()
+  });
+});

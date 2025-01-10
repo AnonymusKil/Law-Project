@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.first-indctory {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
+  padding: 19px;
+  align-items: center;
+  i {
+    color: white;
+  }
+}
+.fad {
+  display: flex;
+  gap: 1rem;
+}
+.cad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get {
+  color: white;
+  background-color: rgb(223, 16, 16);
+  /* padding:  25px 18px; */
+  border: none;
+  display: flex;
+  /* height: 100%;
+    width: 100%; */
+  padding: 10px 15px;
+}
+.second-inductroduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 19px;
+  color: white;
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for smooth color and transform change */
+}
+
+ul a:hover {
+  color: #ff6347; /* Change color on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.other-lists {
+  display: flex;
+  gap: 1rem;
+}
+
+body {
+  animation: bodyFadeIn 1.5s ease-in-out; /* Add animation to body */
+}
+
+@keyframes bodyFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fa-magnifying-glass {
+  cursor: pointer;
+}
+/* .dynamic-search{
+    display: none;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.096);
+}
+.dynamic-search input{
+    padding: 3.5px 9px;
+} */
+.dynamic-search {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+}
+
+.dynamic-search.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dynamic-search input {
+  width: 60%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.dynamic-search input:focus {
+  border-color: #ff6347;
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.5);
+}
+
+.dynamic-search button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6347;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.dynamic-search button:hover {
+  background-color: #ff4500;
+  transform: translateY(-2px);
+}
+
+.dynamic-search .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.dynamic-search .close-btn:hover {
+  color: #ff6347;
+}
+.das-1{
+background-color: #ff6347;  
+height: 6px;
+width: 2rem;
+}
+.senior-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1.7rem; */
+  font-size: 1.3rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(10, 10, 10, 0.5),
+    rgb(10, 10, 10, 0.75)
+  ),
+  url("/assets/img/hero-slider/pexels-sora-shimazaki-5668473.jpg");
+  /* background-image: url(/assets/img/hero-slider/pexels-sora-shimazaki-5668473.jpg); */
+  background-size: cover;
+  height: 80vh;
+  color:white;
+  padding: 2rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top:1.5rem;
+  align-items: center;
+ 
+ 
+}
+.image-container img{
+  width: 390px;
+}
+.hidden{
+  display: none;
+}
+.btn-controller{
+  margin-right:1rem ;
+  margin-left: 1.5rem;
+  button{
+    background-color: #ff6347;
+    padding: 19px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+}
+.btn-controller-1{
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  button{
+    background-color: #ff6347;
+    padding: 19px 23px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+}
