@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+.whole{
+  background-color: #1D1D1D;
+}
 .first-indctory {
   display: flex;
   justify-content: space-between;
@@ -194,7 +197,7 @@ width: 2rem;
  
 }
 .image-container img{
-  width: 390px;
+  width: 490px;
 }
 .hidden{
   display: none;
@@ -222,4 +225,25 @@ width: 2rem;
     cursor: pointer;
     color: white;
   }
+}
+.free{
+  padding: 14.5px 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6347;
+  color: white;
+  font-weight: bolder;
+}
+.free:hover{
+  background-color: transparent;
+  border: 1px solid white;
+}
+.learn{
+  padding: 14.5px 8px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.learn:hover{
+  background-color: grey;
 }
