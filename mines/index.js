@@ -36,9 +36,12 @@ function showBanner(cana) {
     }
   });
 }
-setInterval(() => {
-currentSlide = currentSlide < cards.length ? currentSlide + 1 : 1;
-}, 1000)
+// setInterval(() => {
+// currentSlide = currentSlide < cards.length ? currentSlide + 1 : 1;
+// }, 1000)
+// function startAutoSlide() {
+//   autoSlideInterval = setInterval(prevButton,1000)
+// }
 prevButton.addEventListener("click", () => {
   currentSlide = currentSlide === 1 ? cards.length : currentSlide - 1; // Go to last card if at the first
   showBanner(currentSlide);
@@ -48,6 +51,12 @@ nextButton.addEventListener("click", () => {
   currentSlide = currentSlide === cards.length ? 1 : currentSlide + 1; // Go to first card if at the last
   showBanner(currentSlide);
 });
-
+function startAutoSlide(params) {
+  setInterval(() => { 
+    currentSlide = currentSlide === cards.length ? 1 : currentSlide + 1;
+    showBanner(currentSlide);
+  },1000)
+}
 // Initially show the first card
 showBanner(currentSlide);
+// startAutoSlide()

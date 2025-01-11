@@ -247,3 +247,107 @@ width: 2rem;
 .learn:hover{
   background-color: grey;
 }
+.card-container-2{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: -2.3rem;
+  /* width: 100%;
+  max-width: 1200px; */
+  /* padding: 1rem; */
+  /* max-width: 350px; */
+  padding: 20px;
+  gap: 1.5rem;
+  color: white;
+}
+.card-container{
+  background-color: black;
+  padding: 1rem  2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 2.9);
+}
+.card-container h1{
+font-family: "Poppins", sans-serif;
+font-weight: bold;
+}
+.card-container p:last-child{
+  font-family: "Inter", sans-serif;
+}
+.icon p{
+  font-size: 1.5rem;
+  background-color: #ff4500;
+  border-radius: 7px;
+  padding: 5px;
+  max-width: 40px;
+  cursor: pointer;
+}
+.icon p:hover{
+  background-color: #ff9900;
+  
+}
+.info-naham{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.about-info-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* margin-left: auto; */
+  padding: 2rem;
+  color: white;
+  /* margin-right: auto; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.features-side{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.about-info-container img{
+  width: 430px;
+  display: block;
+}
+.inside{
+  background-color: white;
+  height: 2rem;
+  width: 27rem;
+  top: 2%;
+  margin-top: -2rem;
+  
+}
+.image-about-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.real-about{
+  margin-left: 1.5rem;
+}
+.real-about h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.real-about p{
+  font-style: "Inter", sans-serif;
+
+}
+.real-about button{
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 1rem;
+}
+.real-about i {
+  color: #ff4500;
+}
