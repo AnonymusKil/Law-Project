@@ -1,0 +1,65 @@
+/* General Body Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Loader Container */
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Fan Container */
+.fan-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  animation: spin 1s linear infinite; /* Rotation animation for the fan */
+}
+
+/* Fan Blades */
+.blade {
+  position: absolute;
+  width: 15px;
+  height: 70px;
+  background-color: #ff4500;
+  border-radius: 10px;
+  transform-origin: bottom center;
+}
+
+/* Positioning Each Blade */
+.blade1 {
+  transform: rotate(0deg);
+}
+.blade2 {
+  transform: rotate(90deg);
+}
+.blade3 {
+  transform: rotate(180deg);
+}
+.blade4 {
+  transform: rotate(270deg);
+}
+
+/* Fan Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
